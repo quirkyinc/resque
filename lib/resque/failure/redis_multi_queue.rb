@@ -34,7 +34,7 @@ module Resque
       end
 
       def self.all(offset = 0, limit = 1, queue = :failed, order = 'desc')
-        Resque.list_range(queue, offset, limit, order)
+        Resque.list_range(queue, offset, limit)
       end
 
       def self.queues
